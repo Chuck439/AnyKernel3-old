@@ -65,5 +65,9 @@ else
     ui_print "No WiFi HAL patching needed."
 fi
 
+# Replace post_boot with ours.
+ui_print "Pushing init.qcom.post_boot.sh..."
+replace_file "/vendor/bin/init.qcom.post_boot.sh" "0755" "init.qcom.post_boot.sh"
+
 ## end install
 
