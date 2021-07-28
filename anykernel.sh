@@ -14,7 +14,7 @@ device.name1=olivelite
 device.name2=olivewood
 device.name3=olive
 device.name4=olives
-device.name5=
+device.name5=pine
 supported.versions=
 '; } # end properties
 
