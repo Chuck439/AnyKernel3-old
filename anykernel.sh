@@ -32,18 +32,5 @@ split_boot;
 flash_boot;
 flash_dtbo;
 
-ui print " "
-
-ui_print "Mounting /vendor..."
-mount -o rw,remount /vendor
-
-ui_print "Updating OMX blobs..."
-replace_file "/vendor/lib/libOmxVenc.so" "0644" "lib_libOmxVenc.so"
-replace_file "/vendor/lib/libOmxVdec.so" "0644" "lib_libOmxVdec.so"
-if [ -d "/vendor/lib64" ]; then
-replace_file "/vendor/lib64/libOmxVenc.so" "0644" "lib64_libOmxVenc.so"
-replace_file "/vendor/lib64/libOmxVdec.so" "0644" "lib64_libOmxVdec.so"
-fi
-
 ## end install
 
